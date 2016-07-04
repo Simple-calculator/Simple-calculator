@@ -1,0 +1,108 @@
+  
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="utf-8">
+  <title>calc</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+</script>
+<script>
+    $(document).on("click", "#add", function(evt)
+    {
+        /* your code goes here */ 
+        var num1=parseInt(document.getElementById("number1").value);
+        var num2=parseInt(document.getElementById("number2").value);
+        var rest= num1 + num2 ;
+        document.getElementById("results").value = rest ;
+        document.getElementById("number1").value = '' ;
+        document.getElementById("number2").value = '' ;
+        
+        
+         return false;
+});
+    $(document).on("click", "#sub", function(evt)
+    {
+        /* your code goes here */ 
+        var num1=parseInt(document.getElementById("number1").value);
+        var num2=parseInt(document.getElementById("number2").value);
+        var rest= num1 - num2 ;
+        document.getElementById("results").value = rest ;
+        document.getElementById("number1").value = '' ;
+        document.getElementById("number2").value = '' ;
+         return false;
+});
+     $(document).on("click", "#mult", function(evt)
+    {
+        /* your code goes here */ 
+        var num1=parseInt(document.getElementById("number1").value);
+        var num2=parseInt(document.getElementById("number2").value);
+        var rest= num1 * num2 ;
+        document.getElementById("results").value = rest ;
+        document.getElementById("number1").value = '' ;
+        document.getElementById("number2").value = '' ;
+         return false;
+});
+     $(document).on("click", "#div", function(evt)
+    {
+        /* your code goes here */ 
+        var num1=parseInt(document.getElementById("number1").value);
+        var num2=parseInt(document.getElementById("number2").value);
+        var rest= num1 / num2 ;
+        document.getElementById("results").value = rest ;
+        document.getElementById("number1").value = '' ;
+        document.getElementById("number2").value = '' ;
+         return false;
+});
+
+
+</script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    
+ </head>
+  <body>
+        <div class="upage" id="mainpage">
+            <div class="upage-outer">
+                <div class="uib-header header-bg container-group inner-element uib_w_1" data-uib="layout/header" data-ver="0">
+                    <h2>Simple Calculator</h2>
+                    <div class="widget-container wrapping-col single-centered"></div>
+                    <div class="widget-container content-area horiz-area wrapping-col left"></div>
+                    <div class="widget-container content-area horiz-area wrapping-col right"></div>
+                </div>
+                <div class="upage-content ac0 content-area vertical-col" id="page_81_2">
+                    <div class="table-thing widget uib_w_2 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+                        <label class="narrow-control label-top-left" for="number1">First Num:</label>
+                        <input class="wide-control form-control default" type="number" placeholder="Enter  First Number" id="number1">
+                    </div>
+                    <div class="table-thing widget uib_w_3 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+                        <label class="narrow-control label-top-left" for="number2">Second Num:</label>
+                        <input class="wide-control form-control default" type="text" placeholder="Enter Second Num" id="number2">
+                    </div>
+                    <button class="btn widget uib_w_4 d-margins btn-primary" data-uib="twitter%20bootstrap/button" data-ver="1" for="activity" id="add">ADDITION</button>
+                    <button class="btn widget uib_w_5 d-margins btn-warning" data-uib="twitter%20bootstrap/button" data-ver="1" id="sub">SUBTRACTION</button>
+                    <button class="btn widget uib_w_6 d-margins btn-primary" data-uib="twitter%20bootstrap/button" data-ver="1" id="mult">MULTPLICATION</button>
+                    <button class="btn widget uib_w_7 d-margins btn-warning" data-uib="twitter%20bootstrap/button" data-ver="1" id="div">DIVISION</button>
+                    <div class="table-thing widget uib_w_8 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+                        <label class="narrow-control label-top-left" for="results">Results:</label>
+                        <input class="wide-control form-control default" type="text" id="results">
+                    </div>
+                </div>
+
+                <div class="text-center" style="margin-top:30px;">
+                    <b><p><a href="#history" id="view">View History</a></p></b>
+                </div>
+
+                <div class="uib-footer uib-footer-fixed footer-bg container-group inner-element uib_w_9" data-uib="layout/footer" data-ver="0">
+                    <h2>copyright © 2016 by group</h2>
+                    <div class="widget-container wrapping-col single-centered"></div>
+                    <div class="widget-container content-area horiz-area wrapping-col left"></div>
+                    <div class="widget-container content-area horiz-area wrapping-col right"></div>
+                </div>
+                <div id="history" class="upage-content vertical-col left hidden"></div>
+            </div>
+        </div>
+    </body>
+
+</html>

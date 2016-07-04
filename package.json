@@ -1,0 +1,23 @@
+{
+  "name": "app.js",
+  "version": "1.0.0",
+  "description": "a simple app that takes in two numbers and either adds,subtracts,divides or multiplies.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mercy thirty",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-session": "^1.14.0",
+    "method-override": "^2.3.6",
+    "mongodb": "^2.1.18",
+    "mongoose": "^4.5.3",
+    "morgan": "^1.7.0",
+    "nodejs": "0.0.0",
+    "path": "^0.12.7",
+    "sys": "0.0.1"
+  }
+}
