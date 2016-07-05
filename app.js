@@ -15,9 +15,11 @@ var path=require('path')
 var bodyParser   = require('body-parser');
 var session=require('express-session');
 var methodOverride = require('method-override');  
-var MongoClient = mongodb.MongoClient;
+//var MongoClient = mongodb.MongoClient;
+var Activity=require('./routes/activity');
 //connect to mongo database
 var url = 'mongodb://localhost:27017/math';
+
 //use required modules
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'views')));
@@ -26,22 +28,9 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(methodOverride());
 app.set('view engine', 'html');
 
-//Schema for activity
 var mongoose=require('mongoose');
+mongoose.connect('mongodb://localhost/math');
 
-//Create a Schema model to hold your activity data.
-var activitySchema = mongoose.Schema({
-    number1:Number,
-    number2:Number,
-    activity : String,
-    results:Number
-    //timestamp_minute: true
-});
-
-module.exports = mongoose.model('Activity',activitySchema);
- 
-
-    
 // Page.
 app.get('/', function(req, res){
     res.sendFile('calc.html', {'root' : 'views'});
@@ -50,10 +39,10 @@ app.get('/', function(req, res){
 //Return all the activities from the collection.
 app.get('/activity', function(req, res){
   Activity.find({}, function(err, activity){
-    if(error)
+    if(err)
       res.send(err)
     res.json(activity)
-});
+ });
 });
 
 
