@@ -9,7 +9,5 @@ var activitySchema = mongoose.Schema({
     activity:String,
     rest:Number,
     time : { type : Date, default: Date.now }
-   
 });
  module.exports =mongoose.model('Activity', activitySchema);
-    
