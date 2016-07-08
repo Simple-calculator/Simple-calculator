@@ -6,8 +6,8 @@ var mongoose=require('mongoose');
 var activitySchema = mongoose.Schema({
     num1:Number,
     num2:Number,
-    rest:Number,
     activity:String,
+    rest:Number,
     time : { type : Date, default: Date.now }
    
 });

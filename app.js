@@ -34,26 +34,21 @@ app.get('/calc', function(req, res){
 });
 
 //send activity to frontend
-app.get('/api/activity', function(req, res){
+app.get('/activity', function(req, res){
   Activity.find({}, function(err, activity){
     if(err)
       res.send(err)
     res.json(activity)
  });
 });
-
-
- 
-
-
-       
+   
  //insert values into mongo db
     app.post('/insert', function(req, res){
         Activity.create({
              num1 : req.body.num1,
              num2 : req.body.num2,
-             rest : req.body.rest,
-             activity:req.body.activity
+             activity:req.body.activity,
+             rest : req.body.rest
             },
             function(err, activity){
            if(err)
